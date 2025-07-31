@@ -4,7 +4,7 @@
 [![Build Status](https://scrutinizer-ci.com/g/bit-wasp/bitcoin-php/badges/build.png?b=master)](https://scrutinizer-ci.com/g/bit-wasp/bitcoin-php/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/bit-wasp/bitcoin-php/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bit-wasp/bitcoin-php/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Bit-Wasp/bitcoin-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Bit-Wasp/bitcoin-php/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/protonlabs/bitcoin/v/stable.png)](https://packagist.org/packages/protonlabs/bitcoin)
+[![Latest Stable Version](https://poser.pugx.org/chuoke/bitcoin/v/stable.png)](https://packagist.org/packages/chuoke/bitcoin)
 
 This repository contains an implementation of Bitcoin using mostly pure PHP.
 
@@ -14,11 +14,11 @@ This repository contains an implementation of Bitcoin using mostly pure PHP.
 
 ## Installation
 
-You can install this library via Composer: `composer require protonlabs/bitcoin`
+You can install this library via Composer: `composer require chuoke/bitcoin`
 
 ## Contributing
 
-All contributions are welcome. Please see [[this page](https://github.com/ProtonMail/bitcoin-php/blob/master/CONTRIBUTING.md)] before you get started
+All contributions are welcome. Please see [[this page](https://github.com/chuoke/bitcoin-php/blob/master/CONTRIBUTING.md)] before you get started
 
 ## Documentation
 
