@@ -64,11 +64,10 @@ class OutputCollectionMutatorTest extends AbstractTestCase
         $this->assertEquals(1, count($outputs));
     }
 
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testInvalidSlice()
     {
+        $this->expectException(\RuntimeException::class);
+
         $collection = [
         ];
 
@@ -103,11 +102,10 @@ class OutputCollectionMutatorTest extends AbstractTestCase
         $this->assertEquals(1, $newCollection[0]->getValue());
     }
 
-    /**
-     * @expectedException \OutOfRangeException
-     */
     public function testInvalidIndex()
     {
+        $this->expectException(\OutOfRangeException::class);
+
         $mutator = new OutputCollectionMutator([]);
         $mutator->offsetGet(10);
     }

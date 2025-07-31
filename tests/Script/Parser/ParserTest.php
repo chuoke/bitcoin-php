@@ -82,6 +82,8 @@ class ParserTest extends AbstractTestCase
                     $this->assertSame($expectedPushData, $data->getBinary());
                 }
             }
+        } else {
+            $this->assertTrue(true);
         }
     }
 

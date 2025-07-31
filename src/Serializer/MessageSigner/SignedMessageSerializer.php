@@ -67,7 +67,7 @@ class SignedMessageSerializer
 
         $messageStartPos = strlen(self::HEADER) + 1;
         $messageEndPos = $sigHeaderPos - $messageStartPos - 1;
-        $message = substr($content, $messageStartPos, $messageEndPos);
+        $message = trim(substr($content, $messageStartPos, $messageEndPos));
 
         $sigStart = $sigHeaderPos + strlen(self::SIG_START);
 

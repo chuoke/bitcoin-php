@@ -31,11 +31,10 @@ class HierarchicalKeySequenceTest extends AbstractTestCase
         $this->assertEquals([$eSeq], $sequence->decodeRelative($node));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testDecodePathFailure()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $sequence = new HierarchicalKeySequence();
         $sequence->decodeRelative('');
     }

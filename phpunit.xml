@@ -22,7 +22,9 @@
     <filter>
         <whitelist>
             <directory>src</directory>
-            <exclude>src/PaymentProtocol/Protobufs</exclude>
+            <exclude>
+                <directory>./src/PaymentProtocol/Protobufs</directory>
+            </exclude>
         </whitelist>
     </filter>
 </phpunit>

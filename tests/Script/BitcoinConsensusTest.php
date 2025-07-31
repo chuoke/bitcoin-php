@@ -23,6 +23,8 @@ class BitcoinConsensusTest extends AbstractTestCase
             $this->assertThrows(function () use ($c, $flags) {
                 $c->verify(new Transaction(), new Script(null), $flags, 0, 0);
             }, BitcoinConsensusException::class, 'Invalid flags for bitcoinconsensus');
+        } else {
+            $this->assertTrue(true);
         }
     }
 }

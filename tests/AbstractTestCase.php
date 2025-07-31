@@ -103,7 +103,7 @@ abstract class AbstractTestCase extends TestCase
     public function getBlocks()
     {
         $blocks = $this->dataFile('180blocks');
-        $a = explode("\n", $blocks);
+        $a = array_map('trim', explode("\n", $blocks));
         return array_filter($a, 'strlen');
     }
 

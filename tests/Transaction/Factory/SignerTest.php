@@ -295,11 +295,12 @@ class SignerTest extends AbstractTestCase
      * @param EcAdapterInterface $ecAdapter
      * @param ScriptInterface $script
      * @dataProvider getSimpleSpendVectors
-     * @expectedException \RuntimeException
-     * @expectedExceptionMessage Signing with the wrong private key
      */
     public function testRejectsWrongKey(EcAdapterInterface $ecAdapter, ScriptInterface $script)
     {
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage("Signing with the wrong private key");
+
         $outpoint = new OutPoint(new Buffer('', 32), 0xffffffff);
 
         $tx = (new TxBuilder())

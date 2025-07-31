@@ -15,24 +15,22 @@ class JapaneseWordListTest extends AbstractTestCase
         $this->assertEquals(2048, count($wl->getWords()));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testUnknownWord()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $wl = new \BitWasp\Bitcoin\Mnemonic\Bip39\Wordlist\JapaneseWordList();
         $wl->getWord(101010101);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testExceptionOutOfRange()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $wl = new \BitWasp\Bitcoin\Mnemonic\Bip39\Wordlist\JapaneseWordList();
 
         $word = $wl->getIndex('あいだ');
-        $this->assertInternalType('integer', $word);
+        $this->assertIsInt($word);
 
         $wl->getIndex('あいあいあい');
     }

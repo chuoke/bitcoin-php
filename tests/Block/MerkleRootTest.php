@@ -14,11 +14,9 @@ use BitWasp\Buffertools\BufferInterface;
 class MerkleRootTest extends AbstractTestCase
 {
 
-    /**
-     * @expectedException \BitWasp\Bitcoin\Exceptions\MerkleTreeEmpty
-     */
     public function testCannotUseEmptyCollection()
     {
+        $this->expectException(\BitWasp\Bitcoin\Exceptions\MerkleTreeEmpty::class);
         $math = $this->safeMath();
         $root = new MerkleRoot($math, []);
         $root->calculateHash();

@@ -11,10 +11,6 @@ use BitWasp\Buffertools\Buffer;
 
 class OutPointTest extends AbstractTestCase
 {
-    /**
-     * @expectedException InvalidHashLengthException
-     * @expectedExceptionMessage OutPoint: hashPrevOut must be a 32-byte Buffer
-     */
     public function testInvalidHashSize()
     {
         $this->expectException(InvalidHashLengthException::class);

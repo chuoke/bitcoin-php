@@ -34,11 +34,10 @@ class BitcoindBlockSerializerTest extends AbstractTestCase
         $this->assertEquals('000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f', $block->getHeader()->getHash()->getHex());
     }
 
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testWithInvalidNetBytes()
     {
+        $this->expectException(\RuntimeException::class);
+
         $math = new Math();
         $bhs = new BlockHeaderSerializer();
         $txs = new TransactionSerializer();

@@ -45,12 +45,11 @@ class TransactionTest extends AbstractTestCase
         $this->assertSame(191, $tx->getVersion());
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Transaction version is outside valid range
-     */
     public function testSetVersionException()
     {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Transaction version is outside valid range');
+
         new Transaction(4294967999);
     }
 
@@ -69,28 +68,25 @@ class TransactionTest extends AbstractTestCase
         $this->assertEquals($lockTime, $tx->getLockTime());
     }
 
-    /**
-     * @expectedException \Exception
-     */
     public function testSetLockTimeException()
     {
+        $this->expectException(\Exception::class);
+
         new Transaction(1, [], [], [], 4294967297);
     }
 
-    /**
-     * @expectedException \Exception
-     */
     public function testGetInputException()
     {
+        $this->expectException(\Exception::class);
+
         $tx = new Transaction();
         $tx->getInput(0);
     }
 
-    /**
-     * @expectedException \Exception
-     */
     public function testGetOutputException()
     {
+        $this->expectException(\Exception::class);
+
         $tx = new Transaction();
         $tx->getOutput(0);
     }

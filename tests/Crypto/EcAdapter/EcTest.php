@@ -50,12 +50,11 @@ class EcTest extends AbstractTestCase
         return $math->mod($math->mul($key, $add), $ec->getOrder());
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage Failed to find valid recovery factor
-     */
     public function testCalcPubkeyRecidFail()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Failed to find valid recovery factor');
+
         $math = new Math();
         $g = EccFactory::getSecgCurves($math)->generator256k1();
 

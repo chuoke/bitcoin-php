@@ -85,4 +85,14 @@ class Signature extends Serializable implements SignatureInterface, \Mdanter\Ecc
     {
         return (new DerSignatureSerializer($this->ecAdapter))->serialize($this);
     }
+
+    /**
+     * Returns "ecdsa" or "schnorr" depending on the signature type.
+     *
+     * @return string
+     */
+    public function getSignatureType(): string
+    {
+        return 'ecdsa';
+    }
 }

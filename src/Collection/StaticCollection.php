@@ -151,7 +151,7 @@ abstract class StaticCollection implements CollectionInterface
      * @return mixed
      */
     #[\ReturnTypeWillChange]
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         if (!array_key_exists($offset, $this->set)) {
             throw new \OutOfRangeException('Nothing found at this offset');
