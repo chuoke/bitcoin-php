@@ -1,13 +1,18 @@
 {
-  "name": "protonlabs/bitcoin",
+  "name": "chuoke/bitcoin",
   "description": "PHP Bitcoin library with functions for transactions, signatures, serialization, Random/Deterministic ECDSA keys, blocks, RPC bindings",
   "type": "library",
-  "homepage": "https://github.com/bit-wasp/bitcoin-php",
+  "homepage": "https://github.com/chuoke/bitcoin-php",
   "license": "Unlicense",
   "authors": [
     {
       "name": "Thomas Kerin",
       "homepage": "https://thomaskerin.io",
+      "role": "Author"
+    },
+    {
+      "name": "Chuoke",
+      "homepage": "https://github.com/chuoke",
       "role": "Author"
     }
   ],
